@@ -19,7 +19,7 @@ export default function Home({
 	totalFollowing,
 	totalGists,
 }: PinnedItemsType) {
-	const githubLink = 'https://github.com/realstoman';
+	const githubLink = 'https://github.com/uvacoder';
 
 	// Total public repos
 	const totalPublicRepos = publicRepos.length;
@@ -136,7 +136,7 @@ export async function getStaticProps() {
 	const { data } = await client.query({
 		query: gql`
 			{
-				user(login: "realstoman") {
+				user(login: "uvacoder") {
 					repositories(first: 100, privacy: PUBLIC) {
 						edges {
 							node {
